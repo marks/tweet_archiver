@@ -2,5 +2,6 @@ log/*
 tmp/*
 lib/daemon/*.log
 lib/daemon/*.output
+lin/daemon/*.pid
 lib/*.log
 Gemfile.lock
