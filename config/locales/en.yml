@@ -1,0 +1,251 @@
+en:
+  flash:
+    actions:
+      create:
+        notice: "%{resource_name}: create successful"
+        alert: "%{resource_name}: error while creating"
+      update:
+        notice: "%{resource_name}: update successful!"
+        alert: "%{resource_name}: error while updating"
+      destroy:
+        notice: "%{resource_name}: deletion successful!"
+        alert: "%{resource_name}: error while deleting"
+
+  helpers:
+    submit:
+      create: 'Create %{model}'
+      update: 'Modify %{model}'
+
+    create: 'Create %{model}'
+    update: 'Modify %{model}'
+    show: 'Show %{model}'
+    index: "Index/list %{model}"
+    destroy: "Delete %{model}"
+
+  number:
+    format:
+      delimiter: ""
+      precision: 2
+      significant: false
+      strip_insignificant_zeros: false
+      separator: "."
+
+    currency:
+      format:
+        format: "%n %u"
+        unit: "$"
+        separator: "."
+        delimiter: ","
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    percentage:
+      format:
+        delimiter: ""
+        # precision:
+
+    precision:
+      format:
+        # separator:
+        delimiter: ""
+        # precision:
+
+    human:
+      format:
+        # separator:
+        delimiter: ""
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Byte"
+          kb: "Kb"
+          mb: "Mb"
+          gb: "Gb"
+          tb: "Tb"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "thousand"
+          million: "million"
+          billion: "billion"
+          trillion: "trillion"
+          quadrillion: "quadrillion"
+
+  date:
+    formats:
+      default: "%m-%d-%Y"
+      short: "%d %b"
+      long: "%B %d %Y"
+      month_name: "%B"
+      month_year: "%B %Y"
+
+    day_names:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+
+    abbr_day_names:
+      - Sun
+      - Mon
+      - Wed
+      - Tue
+      - Thu
+      - Fri
+      - Sat
+
+    month_names:
+      - ~
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
+    abbr_month_names:
+      - ~
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%a %d %b %Y, %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M"
+      month_name: "%B"
+    am: 'am'
+    pm: 'pm'
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_seconds:
+        one:  "less than one second"
+        other: "less than %{count} seconds"
+      x_seconds:
+        one:  "1 second"
+        other: "%{count} seconds"
+      less_than_x_minutes:
+        one:  "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one:  "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one:  "one hour"
+        other: "%{count} hours"
+      x_days:
+        one:  "1 day"
+        other: "about %{count} days"
+      about_x_months:
+        one:  "about 1 month"
+        other: "about %{count} months"
+      x_months:
+        one:  "1 month"
+        other: "%{count} months"
+      about_x_years:
+        one:  "about one year"
+        other: "about %{count} years"
+      over_x_years:
+        one:  "over one year"
+        other: "over %{count} years"
+      almost_x_years:
+        one:   "almost one year"
+        other: "almost %{count} years"
+    prompts:
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Second"
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: " and "
+
+    select:
+      prompt: "Please select"
+
+  activerecord:
+    models:
+      subscription: "Subscription"
+      tweet: "Tweet"
+
+    attributes: &model_attributes
+      subscription:
+        query: "Keyword"
+
+    errors:
+      messages:
+        taken: "è già in uso"
+        record_invalid: "Validazione fallita: %{errors}"
+        carrierwave_processing_error: "non è stato possibile ridimensionare l'immagine"
+        carrierwave_integrity_error: "non è un'immagine"
+        inclusion: "non è incluso nella lista"
+        exclusion: "è riservato"
+        invalid: "non è valido"
+        confirmation: "non coincide con la conferma"
+        accepted: "deve essere accettata"
+        empty: "non può essere vuoto"
+        blank: "non può essere lasciato in bianco"
+        too_long:
+          one: "è troppo lungo (il massimo è 1 carattere)"
+          other: "è troppo lungo (il massimo è %{count} caratteri)"
+        too_short:
+          one:  "è troppo corto (il minimo è 1 carattere)"
+          other:  "è troppo corto (il minimo è %{count} caratteri)"
+        wrong_length:
+          one: "è della lunghezza sbagliata (deve essere di 1 carattere)"
+          other: "è della lunghezza sbagliata (deve essere di %{count} caratteri)"
+        not_a_number: "non è un numero"
+        not_an_integer: "non è un intero"
+        greater_than: "deve essere superiore a %{count}"
+        greater_than_or_equal_to: "deve essere superiore o uguale a %{count}"
+        equal_to: "deve essere uguale a %{count}"
+        less_than: "deve essere meno di %{count}"
+        less_than_or_equal_to: "deve essere meno o uguale a %{count}"
+        odd: "deve essere dispari"
+        even: "deve essere pari"
+
+  simple_form:
+    "yes": 'Sì'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "We have found some errors"
+    labels: *model_attributes
