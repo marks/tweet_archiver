@@ -6,5 +6,5 @@ VisibleTweets::Application.routes.draw do
       end
     end
   end
-  root to: "subscriptions#index"
+  root :to => "subscriptions#index"
 end
