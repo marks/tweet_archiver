@@ -1,7 +1,12 @@
 source 'http://rubygems.org'
 
+# http://railsapps.github.com/rails-heroku-tutorial.html
+gem "heroku"
+group :production do
+  gem 'pg'
+end
+
 gem 'rails', '3.1.0'
-gem 'sqlite3'
 gem 'mysql2'
 gem 'slim'
 gem 'twitter'
@@ -23,19 +28,19 @@ end
 
 gem 'jquery-rails'
 
-group :test do
-  gem 'turn', :require => false
-  gem 'blockenspiel'
-  gem 'capybara'
-  gem 'spork', '~> 0.9.0.rc'
-  gem 'steak'
-  gem 'factory_girl_rails'
-  gem 'launchy'
-  gem 'database_cleaner'
-  gem 'rspec-instafail'
-  gem 'timecop'
-  gem 'active_reload'
-  gem 'rb-fsevent'
-  gem 'growl'
-  gem 'mocha'
-end
+# group :test do
+#   gem 'turn', :require => false
+#   gem 'blockenspiel'
+#   gem 'capybara'
+#   gem 'spork', '~> 0.9.0.rc'
+#   gem 'steak'
+#   gem 'factory_girl_rails'
+#   gem 'launchy'
+#   gem 'database_cleaner'
+#   gem 'rspec-instafail'
+#   gem 'timecop'
+#   gem 'active_reload'
+#   gem 'rb-fsevent'
+#   gem 'growl'
+#   gem 'mocha'
+# end
