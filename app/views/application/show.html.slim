@@ -4,5 +4,5 @@
 - content_for :title do
   h1= i18n_show(resource_class)
   ul.actions
-    li= button_to "Elimina", resource_path(resource), :method => :delete, :class => "delete"
+    li= button_to t("strings.destroy"), resource_path(resource), :method => :delete, :class => "delete"
     li= link_to "torna all'elenco", collection_url

@@ -16,8 +16,8 @@ class Tweet < ActiveRecord::Base
 
   def self.generate_report(tweets, file)
     book = Spreadsheet::Workbook.new
-    sheet = book.create_worksheet :name => 'Report Tweets'
-    sheet.row(0).concat [ "Data", "Utente", "Testo" ]
+    sheet = book.create_worksheet :name => 'Tweets'
+    sheet.row(0).concat [ I18n.t("strings.date"), I18n.t("strings.user"), I18n.t("strings.tweet")  ]
     tweets.each_with_index do |tweet, index|
       sheet.row(index + 1).tap do |row|
         row.push tweet.posted_at

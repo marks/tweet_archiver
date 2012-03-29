@@ -19,7 +19,7 @@ en:
     create: 'Create %{model}'
     update: 'Modify %{model}'
     show: 'Show %{model}'
-    index: "Index/list %{model}"
+    index: "List %{model}"
     destroy: "Delete %{model}"
 
   number:
@@ -210,38 +210,35 @@ en:
 
     errors:
       messages:
-        taken: "è già in uso"
-        record_invalid: "Validazione fallita: %{errors}"
-        carrierwave_processing_error: "non è stato possibile ridimensionare l'immagine"
-        carrierwave_integrity_error: "non è un'immagine"
-        inclusion: "non è incluso nella lista"
-        exclusion: "è riservato"
-        invalid: "non è valido"
-        confirmation: "non coincide con la conferma"
-        accepted: "deve essere accettata"
-        empty: "non può essere vuoto"
-        blank: "non può essere lasciato in bianco"
+        accepted: must be accepted
+        blank: can't be blank
+        confirmation: doesn't match confirmation
+        empty: can't be empty
+        equal_to: must be equal to %{count}
+        even: must be even
+        exclusion: is reserved
+        greater_than: 'must be greater than %{count}'
+        greater_than_or_equal_to: 'must be greater than or equal to %{count}'
+        inclusion: is not included in the list
+        invalid: is invalid
+        less_than: 'must be less than %{count}'
+        less_than_or_equal_to: 'must be less than or equal to %{count}'
+        not_a_number: is not a number
+        not_an_integer: must be an integer
+        odd: must be odd
+        taken: has already been taken
         too_long:
-          one: "è troppo lungo (il massimo è 1 carattere)"
-          other: "è troppo lungo (il massimo è %{count} caratteri)"
+          one: 'is too long (maximum is 1 character)'
+          other: 'is too long (maximum is %{count} characters)'
         too_short:
-          one:  "è troppo corto (il minimo è 1 carattere)"
-          other:  "è troppo corto (il minimo è %{count} caratteri)"
+          one: 'is too short (minimum is 1 character)'
+          other: 'is too short (minimum is %{count} characters)'
         wrong_length:
-          one: "è della lunghezza sbagliata (deve essere di 1 carattere)"
-          other: "è della lunghezza sbagliata (deve essere di %{count} caratteri)"
-        not_a_number: "non è un numero"
-        not_an_integer: "non è un intero"
-        greater_than: "deve essere superiore a %{count}"
-        greater_than_or_equal_to: "deve essere superiore o uguale a %{count}"
-        equal_to: "deve essere uguale a %{count}"
-        less_than: "deve essere meno di %{count}"
-        less_than_or_equal_to: "deve essere meno o uguale a %{count}"
-        odd: "deve essere dispari"
-        even: "deve essere pari"
+          one: 'is the wrong length (should be 1 character)'
+          other: 'is the wrong length (should be %{count} characters)'
 
   simple_form:
-    "yes": 'Sì'
+    "yes": 'Yes'
     "no": 'No'
     required:
       text: 'required'
@@ -249,3 +246,19 @@ en:
     error_notification:
       default_message: "We have found some errors"
     labels: *model_attributes
+  
+  strings:
+    tweets_recorded: "tweets recorded" #  tweet registrati
+    destroy: "Delete" #  Elimina
+    list_subscriptions: "List Subscriptions"# Elenco Sottoscrizioni
+    export: "Export" #  Esporta
+    confirm_destroy: "Are you sure you want to delete this?" #Confermi l'eliminazione?
+    download: "Download" # Scarica
+    list_of_the_latest_tweets: "List the latest tweets for keyword: "# Elenco degli ultimi Tweet per 
+    ago: "ago" #fa
+    export_archive: "Export Archive" #Esporta Archivio
+    starting_from: "Starting from" #:a_partire_da
+    ending_on: "Ending on" #:fino_al
+    date: "Date" #"Data"
+    user: "User" #Utente
+    tweet: "Tweet" #"Testo"

@@ -1,25 +1,26 @@
 h2
-  | Elenco degli ultimi Tweet per "#{parent.query}"
-  span= link_to "Esporta", "#", :"data-toggle-dom" => "#filter_form"
+  | #{t("string.list_of_the_latest_tweets")} "#{parent.query}"
+  span= link_to t("strings.export"), "#", :"data-toggle-dom" => "#filter_form"
 
 #filter_form.hidden
   .dialog
-    h3 Esporta Archivio
+    h3
+      =t("strings.export_archive")
 
     = form_for :filter, :url => export_subscription_tweets_path(parent, :format => :xls), :html => {:method => :get} do |form|
       .input
-        = form.label :a_partire_da
+        = form.label t("strings.starting_from")
         = form.datetime_select :from, :default => 1.month.ago
       .input
-        = form.label :fino_al
+        = form.label t("strings.ending_on")
         = form.datetime_select :to, :default => Time.now
-      = form.submit "Scarica XLS"
+      = form.submit "#{t("strings.download")} XLS"
 
 = render "collection", :collection => collection
 
 - content_for :title do
   h1= i18n_index(resource_class)
   .actions
-    li= button_to "Elimina", parent_path, :method => :delete, :class => "delete", :confirm => "Confermi l'eliminazione?"
-    li= link_to "← Elenco Sottoscrizioni", subscriptions_path, :class => "button"
+    li= button_to t("strings.destroy"), parent_path, :method => :delete, :class => "delete", :confirm => t("strings.confirm_destroy")
+    li= link_to "← #{t("strings.list_subscriptions")}", subscriptions_path, :class => "button"
 

@@ -2,4 +2,4 @@
 .content
   .text= resource.text
   .user= resource.from_user
-  .time #{time_ago_in_words(resource.posted_at)} fa
+  .time #{time_ago_in_words(resource.posted_at)} #{t("strings.ago")}
