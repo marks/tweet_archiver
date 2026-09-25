@@ -6,7 +6,7 @@ group :production do
   gem 'pg'
 end
 
-gem 'rails', '3.1.0'
+gem 'rails', '8.1.4'
 gem 'mysql2'
 gem 'slim'
 gem 'twitter'
@@ -21,8 +21,8 @@ gem 'twitter-stream'
 gem 'daemons'
 
 group :assets do
-  gem 'sass-rails', '~> 3.1.0'
-  gem 'coffee-rails', '~> 3.1.0'
+  gem 'sass-rails', '~> 6.0.0'
+  gem 'coffee-rails', '~> 5.0.0'
   gem 'uglifier'
 end
 
